@@ -146,6 +146,7 @@ public class AnimalSpecies {
         Scanner in = new Scanner(System.in);
         System.out.print("Which animal specie would you like to get information of?: \n 1. Hawk \n 2. Bear \n 3. Lobster \n Your input: ");
         int answer = in.nextInt();
+
         switch (answer) {
             case 1:
                 System.out.print("Animal name is: " + hawk.getAnimalName() + "\n");
@@ -174,24 +175,18 @@ public class AnimalSpecies {
 class Animals
 {
     private String animalName;
-    public String getAnimalName() {
-        return animalName;
-    }
-
-    public void setAnimalName(String animalName) {
-        this.animalName = animalName;
-    }
-
     private String speciesName;
-    public String getSpeciesName() {
-        return speciesName;
-    }
-
-    public void setSpeciesName(String speciesName) {
-        this.speciesName = speciesName;
-    }
-
     private String description;
+    private int chromosomes;
+
+    public int getChromosomes() {
+        return chromosomes;
+    }
+
+    public void setChromosomes(int chromosomes) {
+        this.chromosomes = chromosomes;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -200,12 +195,19 @@ class Animals
         this.description = description;
     }
 
-    private int chromosomes;
-    public int getChromosomes() {
-        return chromosomes;
+    public String getSpeciesName() {
+        return speciesName;
     }
 
-    public void setChromosomes(int chromosomes) {
-        this.chromosomes = chromosomes;
+    public void setSpeciesName(String speciesName) {
+        this.speciesName = speciesName;
+    }
+
+    public String getAnimalName() {
+        return animalName;
+    }
+
+    public void setAnimalName(String animalName) {
+        this.animalName = animalName;
     }
 }
