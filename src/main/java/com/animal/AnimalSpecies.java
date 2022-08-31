@@ -10,8 +10,8 @@ c. Number of chromosomes = int
 d. Description = String
 
 2. Create 3 instances of the class for different species and test the methods using System.out.println() in main method.
-*/
-/*
+
+
 public class AnimalSpecies {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -60,7 +60,7 @@ class Animals
     static int chromosomeNumberLobster = 136;
     static String descriptionLobster = "Lobsters have compound eyes on movable stalks, two pairs of long antennae, and several pairs of swimming legs (swimmerets) on the elongated abdomen.";
 }
-*/
+
 
     class Animals
     {
@@ -120,3 +120,94 @@ public class AnimalSpecies {
         }
     }
 }
+ */
+class Animals
+{
+    private String AnimalName;
+    public String getAnimalName() {
+        return AnimalName;
+    }
+
+    public void setAnimalName(String animalName) {
+        AnimalName = animalName;
+    }
+
+    private String SpeciesName;
+    public String getSpeciesName() {
+        return SpeciesName;
+    }
+
+    public void setSpeciesName(String speciesName) {
+        SpeciesName = speciesName;
+    }
+
+    private String Description;
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
+    }
+
+    private int Chromosomes;
+    public int getChromosomes() {
+        return Chromosomes;
+    }
+
+    public void setChromosomes(int chromosomes) {
+        Chromosomes = chromosomes;
+    }
+}
+
+public class AnimalSpecies {
+    public static void main(String[] args) {
+
+        Animals hawk = new Animals();
+        Animals bear = new Animals();
+        Animals lobster = new Animals();
+
+        hawk.setAnimalName("hawk");
+        hawk.setSpeciesName("bird");
+        hawk.setChromosomes(80);
+        hawk.setDescription("\"Hawks are strong, powerful birds. Their feet are equipped with sharp, curved talons for capturing prey, and their strong beaks are hooked for biting and tearing flesh.");
+
+        bear.setAnimalName("bear");
+        bear.setSpeciesName("mammal");
+        bear.setChromosomes(74);
+        bear.setDescription("Big mammal with thick fur that hibernate in winter.");
+
+        lobster.setAnimalName("lobster");
+        lobster.setSpeciesName("arthropod");
+        lobster.setChromosomes(136);
+        lobster.setDescription("Lobsters have compound eyes on movable stalks, two pairs of long antennae, and several pairs of swimming legs (swimmerets) on the elongated abdomen.");
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Which animal specie would you like to get information of?: \n 1. Hawk \n 2. Bear \n 3. Lobster \n Your input: ");
+        int answer = in.nextInt();
+        switch (answer) {
+            case 1:
+                System.out.print("Animal name is: " + hawk.getAnimalName() + "\n");
+                System.out.print("Animal specie is: " + hawk.getSpeciesName() + "\n");
+                System.out.print("Animal haploid chromosome number is: " + hawk.getChromosomes() / 2 + "\n");
+                System.out.print("Animal description is: " + hawk.getDescription() + "\n");
+                break;
+
+            case 2:
+                System.out.print("Animal name is: " + bear.getAnimalName() + "\n");
+                System.out.print("Animal specie is: " + bear.getSpeciesName() + "\n");
+                System.out.print("Animal haploid chromosome number is: " + bear.getChromosomes() / 2 + "\n");
+                System.out.print("Animal description is: " + bear.getDescription() + "\n");
+                break;
+
+
+            case 3:
+                System.out.print("Animal name is: " + lobster.getAnimalName() + "\n");
+                System.out.print("Animal specie is: " + lobster.getSpeciesName() + "\n");
+                System.out.print("Animal haploid chromosome number is: " + lobster.getChromosomes() / 2 + "\n");
+                System.out.print("Animal description is: " + lobster.getDescription() + "\n");
+                break;
+        }
+    }
+}
+
