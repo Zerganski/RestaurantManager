@@ -121,45 +121,6 @@ public class AnimalSpecies {
     }
 }
  */
-class Animals
-{
-    private String AnimalName;
-    public String getAnimalName() {
-        return AnimalName;
-    }
-
-    public void setAnimalName(String animalName) {
-        AnimalName = animalName;
-    }
-
-    private String SpeciesName;
-    public String getSpeciesName() {
-        return SpeciesName;
-    }
-
-    public void setSpeciesName(String speciesName) {
-        SpeciesName = speciesName;
-    }
-
-    private String Description;
-    public String getDescription() {
-        return Description;
-    }
-
-    public void setDescription(String description) {
-        Description = description;
-    }
-
-    private int Chromosomes;
-    public int getChromosomes() {
-        return Chromosomes;
-    }
-
-    public void setChromosomes(int chromosomes) {
-        Chromosomes = chromosomes;
-    }
-}
-
 public class AnimalSpecies {
     public static void main(String[] args) {
 
@@ -210,4 +171,41 @@ public class AnimalSpecies {
         }
     }
 }
+class Animals
+{
+    private String animalName;
+    public String getAnimalName() {
+        return animalName;
+    }
 
+    public void setAnimalName(String animalName) {
+        this.animalName = animalName;
+    }
+
+    private String speciesName;
+    public String getSpeciesName() {
+        return speciesName;
+    }
+
+    public void setSpeciesName(String speciesName) {
+        this.speciesName = speciesName;
+    }
+
+    private String description;
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    private int chromosomes;
+    public int getChromosomes() {
+        return chromosomes;
+    }
+
+    public void setChromosomes(int chromosomes) {
+        this.chromosomes = chromosomes;
+    }
+}
