@@ -1,4 +1,4 @@
-package com.Calculator;
+package com.calculator;
 import java.util.Scanner;
 /*
 0. Figure out how to input X, input function, input Y, in mentioned order.
@@ -9,9 +9,9 @@ a. add (x + y)
 b. subtract (x - y)
 c. multiply (x * y)
 d. divide (x / y)
- */
 
-/*
+
+
 public class Calculator {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -20,15 +20,19 @@ public class Calculator {
         switch (answer) {
             case 1: {
                 Operations.add();
+                return;
             }
             case 2: {
                 Operations.subtract();
+                return;
             }
             case 3: {
-                Operations.subtract();
+                Operations.divide();
+                return;
             }
             case 4: {
                 Operations.multiply();
+                return;
             }
         }
 
@@ -71,7 +75,9 @@ public class Calculator {
         }
     }
 }
-*/
+
+
+
 public class Calculator {
     private static int numberTwo;
     private static int numberOne;
@@ -83,33 +89,81 @@ public class Calculator {
         String answer = in.nextLine();
         switch (answer) {
             case "+":
+                numberTwo = in.nextInt();
                 add();
             case "-":
+                numberTwo = in.nextInt();
                 subtract();
             case "*":
+                numberTwo = in.nextInt();
                 multiply();
             case "/":
+                numberTwo = in.nextInt();
                 divide();
         }
     }
-    static Scanner in = new Scanner(System.in);
     private static void add() {
-        numberTwo = in.nextInt();
         System.out.println("Sum: " + (numberOne + numberTwo));
     }
     static void subtract() {
-        numberTwo = in.nextInt();
         System.out.println("Sum: " + (numberOne - numberTwo));
     }
 
     static void multiply() {
-        numberTwo = in.nextInt();
         System.out.println("Sum: " + (numberOne * numberTwo));
     }
 
     static void divide() {
-        numberTwo = in.nextInt();
         System.out.println("Sum: " + (numberOne / numberTwo));
+    }
+}
+*/
+class Main {
+    public static void main(String[] args) {
+
+        String operator;
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Choose what to do: calc, exit, hist");
+        operator = in.nextLine();
+
+        switch (operator) {
+            case "calc":
+                Making();
+
+            case "exit":
+                System.exit(0);
+        }
+    }
+    public static void Making() {
+        Double choice;
+        double number1, number2, result;
+        Scanner in = new Scanner(System.in);
+        {
+            System.out.println("Enter first number");
+            number1 = in.nextDouble();
+
+            System.out.println("Choose an operator: +, -, *, or /");
+            choice = in.nextDouble();
+
+            System.out.println("Enter second number");
+            number2 = in.nextDouble();
+        }
+
+        if (choice == '+') {
+            result = number1 + number2;
+            System.out.println(number1 + " + " + number2 + " = " + result);
+        } else if (choice == '-') {
+            result = number1 - number2;
+            System.out.println(number1 + " - " + number2 + " = " + result);
+        } else if (choice == '*') {
+            result = number1 * number2;
+            System.out.println(number1 + " * " + number2 + " = " + result);
+        } else if (choice == '/') {
+            result = number1 / number2;
+            System.out.println(number1 + " / " + number2 + " = " + result);
+        }
     }
 }
 
