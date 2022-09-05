@@ -179,10 +179,7 @@ class Animals
     private String description;
     private int chromosomes;
 
-    public int getChromosomes() {
-        return chromosomes;
-    }
-
+    public int getChromosomes() { return chromosomes;}
     public void setChromosomes(int chromosomes) {
         this.chromosomes = chromosomes;
     }
