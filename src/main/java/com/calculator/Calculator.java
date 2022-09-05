@@ -118,52 +118,108 @@ public class Calculator {
     }
 }
 */
+/*
 class Main {
     public static void main(String[] args) {
 
-        String operator;
+        char operator;
+        Double number1, number2, result;
 
-        Scanner in = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        System.out.println("Choose what to do: calc, exit, hist");
-        operator = in.nextLine();
+        System.out.println("Enter first number");
+        number1 = input.nextDouble();
+
+        System.out.println("Choose an operator: +, -, *, or /");
+        operator = input.next().charAt(0);
+
+        System.out.println("Enter second number");
+        number2 = input.nextDouble();
 
         switch (operator) {
-            case "calc":
-                Making();
+            case '+':
+                result = number1 + number2;
+                System.out.println(number1 + "+" + number2 + "=" + result);
+                break;
+            case '-':
+                result = number1 - number2;
+                System.out.println(number1 + "-" + number2 + "=" + result);
+                break;
+            case '*':
+                result = number1 * number2;
+                System.out.println(number1 + "*" + number2 + "=" + result);
+                break;
+            case '/':
+                result = number1 / number2;
+                System.out.println(number1 + "/" + number2 + "=" + result);
+                break;
+            default:
+                System.out.println("Invalid operator!");
+                break;
+        }
+        input.close();
+    }
+} */
 
-            case "exit":
+public class Calculator {
+    static int numberTwo;
+    static int numberOne;
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("What do you want to do: calc or exit ");
+        String answer = in.nextLine();
+        switch (answer) {
+            case "calc": {
+                Calculations();
+            }
+            case "exit": {
                 System.exit(0);
+            }
         }
     }
-    public static void Making() {
-        Double choice;
-        double number1, number2, result;
-        Scanner in = new Scanner(System.in);
-        {
-            System.out.println("Enter first number");
-            number1 = in.nextDouble();
 
-            System.out.println("Choose an operator: +, -, *, or /");
-            choice = in.nextDouble();
+    static Scanner in = new Scanner(System.in);
 
-            System.out.println("Enter second number");
-            number2 = in.nextDouble();
-        }
+    private static void add() {
+        numberTwo = in.nextInt();
+        System.out.println("Sum: " + (numberOne + numberTwo));
+    }
 
-        if (choice == '+') {
-            result = number1 + number2;
-            System.out.println(number1 + " + " + number2 + " = " + result);
-        } else if (choice == '-') {
-            result = number1 - number2;
-            System.out.println(number1 + " - " + number2 + " = " + result);
-        } else if (choice == '*') {
-            result = number1 * number2;
-            System.out.println(number1 + " * " + number2 + " = " + result);
-        } else if (choice == '/') {
-            result = number1 / number2;
-            System.out.println(number1 + " / " + number2 + " = " + result);
-        }
+    static void subtract() {
+        numberTwo = in.nextInt();
+        System.out.println("Sum: " + (numberOne - numberTwo));
+    }
+
+    static void multiply() {
+        numberTwo = in.nextInt();
+        System.out.println("Sum: " + (numberOne * numberTwo));
+    }
+
+    static void divide() {
+        numberTwo = in.nextInt();
+        System.out.println("Sum: " + (numberOne / numberTwo));
+    }
+
+    static void Calculations() {
+        char answer = 0;
+        do {
+            System.out.println("Type in your calculation: ");
+            numberOne = in.nextInt();
+            answer = in.next().charAt(0);
+            switch (answer) {
+                case '+':
+                    add();
+                    break;
+                case '-':
+                    subtract();
+                    break;
+                case '*':
+                    multiply();
+                    break;
+                case '/':
+                    divide();
+                    break;
+            }
+        } while (answer != '1');
     }
 }
-

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e61aca-d21d-4ccb-bf0e-94d886051dd6" name="Changes" comment="Calculator update">
+    <list default="true" id="85e61aca-d21d-4ccb-bf0e-94d886051dd6" name="Changes" comment="failures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Calculator/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/calculator/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/calculator/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/calculator/Calculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662404002943</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="failures">
+      <created>1662406858751</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1662406858751</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +152,7 @@
     <MESSAGE value="Hello World" />
     <MESSAGE value="AnimalSpecies update" />
     <MESSAGE value="Calculator update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calculator update" />
+    <MESSAGE value="failures" />
+    <option name="LAST_COMMIT_MESSAGE" value="failures" />
   </component>
 </project>
