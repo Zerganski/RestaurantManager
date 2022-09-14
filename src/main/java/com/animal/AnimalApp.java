@@ -121,12 +121,12 @@ public class AnimalSpecies {
     }
 }
  */
-public class AnimalSpecies {
+public class AnimalApp {
     public static void main(String[] args) {
 
-        Animals hawk = new Animals();
-        Animals bear = new Animals();
-        Animals lobster = new Animals();
+        Animal hawk = new Animal();
+        Animal bear = new Animal();    //przykladowa inicjalizacja (bardzo fajna), plus deklaracja   OD LEWEJ DEKLARACJA DO =
+        Animal lobster = new Animal();  // hawk bear i lobster to instancje klasy animal (obiekty)
 
         hawk.setAnimalName("hawk");
         hawk.setSpeciesName("bird");
@@ -172,39 +172,5 @@ public class AnimalSpecies {
         }
     }
 }
-class Animals
-{
-    private String animalName;
-    private String speciesName;
-    private String description;
-    private int chromosomes;
 
-    public int getChromosomes() { return chromosomes;}
-    public void setChromosomes(int chromosomes) {
-        this.chromosomes = chromosomes;
-    }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getSpeciesName() {
-        return speciesName;
-    }
-
-    public void setSpeciesName(String speciesName) {
-        this.speciesName = speciesName;
-    }
-
-    public String getAnimalName() {
-        return animalName;
-    }
-
-    public void setAnimalName(String animalName) {
-        this.animalName = animalName;
-    }
-}
