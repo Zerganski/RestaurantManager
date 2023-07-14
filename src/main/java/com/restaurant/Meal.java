@@ -1,6 +1,5 @@
 package com.restaurant;
 
-import java.util.Set;
 
 public class Meal {
     private String price;
@@ -17,8 +16,15 @@ public class Meal {
 
     @Override
     public String toString() {
-        return " meal name: " + name + ", meal price: " + price;
+        return " name: " + name + ", price: " + price;
     }
 
 
+    public String getName() {
+        return name;
+    }
+
+    public String getPrice() {
+        return price;
+    }
 }
