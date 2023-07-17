@@ -8,12 +8,6 @@ public class Meal {
         this.name = name;
         this.price = price;
     }
-    public Meal() {
-    }
-
-    public Meal(String name, String address, String type, int restaurantID) {
-    }
-
     @Override
     public String toString() {
         return " name: " + name + ", price: " + price;

@@ -43,13 +43,6 @@ public class Restaurant {
     public void addMeal(Meal meal) {
         meals.add(meal);
     }
-    public String getAddress() {
-        return address;
-    }
-
-    public String getType() {
-        return type;
-    }
 
     public Set<Meal> getMeals() {
         return meals;
@@ -57,10 +50,7 @@ public class Restaurant {
 
     @Override
     public String toString() {
-      //  if (meals.isEmpty()) {
             return "ID: " + id + ", name: " + name + ", address: " + address + ", type: " + type + "\n";
-       // }
-       // return "ID: " + id + ", name: " + name + ", address: " + address + ", type: " + type + "Meals" + meals + "\n";
     }
 
 }
