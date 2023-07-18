@@ -5,36 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e61aca-d21d-4ccb-bf0e-94d886051dd6" name="Changes" comment="Some progress has been made">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/animal/AnimalFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/animal/Bear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/animal/Hawk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/animal/Lobster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/calculator/Calculation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/calculator/CalculatorHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/calculator/CalculatorProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codingbat/Diff21Exercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codingbat/Makes10Exercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codingbat/MissingCharExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codingbat/MonkeyTroubleExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codingbat/NearHundredClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codingbat/NotStringExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codingbat/ParrotTroubleExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codingbat/PosNegExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codingbat/SleepInExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codingbat/SumDoubleExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/ID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/Meal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/MethodTesting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/Restaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/RestaurantApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/RestaurantProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/RestaurantRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/animal/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/animal/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/animal/AnimalApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/animal/AnimalApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/calculator/Calculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/calculator/CalculatorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/calculator/CalculatorApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/helloworld/RestaurantApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/helloworld/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurant/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/Meal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurant/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/Restaurant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +27,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="refactoring" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -71,16 +50,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaVariableFindUsagesOptions.isSearchForTextOccurrences": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/piotr/Downloads/src",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaVariableFindUsagesOptions.isSearchForTextOccurrences&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/piotr/Downloads/src&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.RestaurantApp">
     <configuration name="CalculatorApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.calculator.CalculatorApp" />
@@ -215,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663191601039</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Some progress has been made">
+      <created>1689379121206</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1689379121206</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,16 +222,5 @@
     <MESSAGE value="failures" />
     <MESSAGE value="Some progress has been made" />
     <option name="LAST_COMMIT_MESSAGE" value="Some progress has been made" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/restaurant/RestaurantProcessor.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
