@@ -1,4 +1,4 @@
-package com.restaurant;
+package com.restaurant.model;
 
 import java.util.HashSet;
 import java.util.Set;

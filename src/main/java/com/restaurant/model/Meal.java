@@ -1,5 +1,4 @@
-package com.restaurant;
-
+package com.restaurant.model;
 
 public class Meal {
     private String price;
@@ -12,7 +11,6 @@ public class Meal {
     public String toString() {
         return " name: " + name + ", price: " + price;
     }
-
 
     public String getName() {
         return name;

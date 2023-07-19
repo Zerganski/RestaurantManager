@@ -1,18 +1,21 @@
-package com.restaurant;
+package com.restaurant.consumer;
+
+import com.restaurant.model.Meal;
+import com.restaurant.model.Restaurant;
+import com.restaurant.service.RestaurantServiceImpl;
+import com.restaurant.storage.RestaurantRepository;
 
 import java.util.Scanner;
 import java.util.UUID;
 
 public class RestaurantProcessor {
-    private RestaurantRepository restaurantRepository;
     private Scanner scanner;
-
+    private RestaurantRepository restaurantRepository;
+    static RestaurantServiceImpl service = new RestaurantServiceImpl(new RestaurantRepository());
     public RestaurantProcessor(RestaurantRepository restaurantRepository) {      // 7-10 pole obiektu
         this.restaurantRepository = restaurantRepository;
         this.scanner = new Scanner(System.in);
     }
-
-
     void process() {
         boolean exit = false;
         Scanner in = new Scanner(System.in);
@@ -28,7 +31,7 @@ public class RestaurantProcessor {
             switch (menu) {
                 case 1 -> addRestaurant();
                 case 2 -> addMeal();
-                case 3 -> System.out.println(restaurantRepository.getRestaurants().toString());
+                case 3 -> System.out.println(service.getRestaurantRepository().getRestaurants().toString());
                 case 4 -> displayMeals(restaurantRepository);
                 case 5 -> changeRestaurantName();
                 case 6 -> exitProgram();
@@ -67,7 +70,7 @@ public class RestaurantProcessor {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Which restaurant meals would you like to see? (input UUID)");
         UUID id = UUID.fromString(scanner.nextLine());
-        for (Restaurant r : restaurantRepository.getRestaurants()) {
+        for (Restaurant r : service.getRestaurantRepository().getRestaurants()) {
             if (r.getId().equals(id)) {
                 System.out.println("Meals for " + r.getName() + ":");
                 for (Meal meal : r.getMeals()) {
@@ -87,7 +90,7 @@ public class RestaurantProcessor {
         System.out.println("Enter UUID of the restaurant: "); //should be last
         UUID id = UUID.fromString(scanner.nextLine());
         Meal meal = new Meal(name, price);
-        restaurantRepository.addMeal(meal, id);
+        service.addMeal(meal, id);
     }
     private void changeRestaurantName() {
         System.out.println("Enter the UUID of the restaurant: ");
