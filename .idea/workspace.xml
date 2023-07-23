@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e61aca-d21d-4ccb-bf0e-94d886051dd6" name="Changes" comment="Some progress has been made">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurant/consumer/RestaurantProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/consumer/RestaurantProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurant/service/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/service/RestaurantServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurant/storage/RestaurantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurant/storage/RestaurantRepository.java" afterDir="false" />
-    </list>
+    <list default="true" id="85e61aca-d21d-4ccb-bf0e-94d886051dd6" name="Changes" comment="Code clean-up after moving all of the methods into the service class." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -272,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690133401164</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Code clean-up after moving all of the methods into the service class.">
+      <created>1690133740876</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1690133740876</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,7 +296,8 @@
     <MESSAGE value="Calculator update" />
     <MESSAGE value="failures" />
     <MESSAGE value="Some progress has been made" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some progress has been made" />
+    <MESSAGE value="Code clean-up after moving all of the methods into the service class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Code clean-up after moving all of the methods into the service class." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -34,7 +34,7 @@ public class RestaurantServiceImpl implements RestaurantService {
         addMeal(meal, id);
     }
     public void serviceAddRestaurant() {
-        UUID id = UUID.randomUUID(); // deklaracja zmiennej lokalnej id typu ID oraz inicjalizacje poprzez uzycie konstruktora bezparametrowego klasy id
+        UUID id = UUID.randomUUID();
         System.out.println("Enter name of the restaurant: "); // wywołanie metody printLn pola klasy .out z parametrem typu String o wartosci "enter name of the restaurant:"
         String name = scanner.nextLine(); // deklaracja zmiennej lokalnej o nazwie name typu stirgn oraz inicnjalizacja jej poprzez przypisanei jej wartosci wywołania metody nextLine obiektu skaner
         System.out.println("Enter address of the restaurant: ");
