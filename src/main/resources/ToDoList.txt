@@ -1,0 +1,7 @@
+19.07.2023
+1. Change name of project in GitHub - JavaLearning. Now all java programs you will store in one project.
+It will be useful in the future. For Spring you will do same (SpringLearning).
+
+2. Add all previous apps to JavaLearning project. Create for them packages.
+
+2. Finish LambdaExercise and use it in RestaurantApp.
