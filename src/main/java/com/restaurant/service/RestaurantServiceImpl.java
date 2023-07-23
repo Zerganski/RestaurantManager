@@ -28,7 +28,7 @@ public class RestaurantServiceImpl implements RestaurantService {
         String name = scanner.nextLine();
         System.out.println("Enter price of the meal: ");
         String price = scanner.nextLine();
-        System.out.println("Enter UUID of the restaurant: "); //should be last
+        System.out.println("Enter UUID of the restaurant: ");
         UUID id = UUID.fromString(scanner.nextLine());
         Meal meal = new Meal(name, price);
         addMeal(meal, id);

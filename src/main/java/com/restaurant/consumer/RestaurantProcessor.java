@@ -1,20 +1,13 @@
 package com.restaurant.consumer;
 
-import com.restaurant.model.Meal;
-import com.restaurant.model.Restaurant;
 import com.restaurant.service.RestaurantServiceImpl;
 import com.restaurant.storage.RestaurantRepository;
 
 import java.util.Scanner;
-import java.util.UUID;
 
 public class RestaurantProcessor {
-    private Scanner scanner;
-    private RestaurantRepository restaurantRepository;
     static RestaurantServiceImpl service = new RestaurantServiceImpl(new RestaurantRepository());
     public RestaurantProcessor(RestaurantRepository restaurantRepository) {      // 7-10 pole obiektu
-        this.restaurantRepository = restaurantRepository;
-        this.scanner = new Scanner(System.in);
     }
     void process() {
         boolean exit = false;

@@ -7,8 +7,6 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 
-
-
 public class RestaurantRepository {
 
     private final Set<Restaurant> restaurants = new HashSet<>(Set.of(
@@ -40,20 +38,6 @@ public class RestaurantRepository {
     }
     public void addRestaurant(Restaurant restaurant) {
         restaurants.add(restaurant);
-    }
-
-    public void addMeal(Meal meal, UUID restaurantId) {
-        Optional<Restaurant> restaurantOptional = getRestaurants().stream()
-                .filter(restaurant -> restaurant.getId().equals(restaurantId))
-                .findFirst();
-
-        restaurantOptional.ifPresentOrElse(
-                restaurant -> restaurant.addMeal(meal),
-                () -> System.out.println("Restaurant not found.")
-        );
-    }
-    public void deleteRestaurant(Restaurant restaurant) {
-        restaurants.remove(restaurant);
     }
 
 }
