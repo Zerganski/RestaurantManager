@@ -4,7 +4,7 @@ import com.restaurant.service.RestaurantServiceImpl;
 import com.restaurant.storage.RestaurantRepository;
 
 import java.util.Scanner;
-//123
+
 public class RestaurantProcessor {
     static RestaurantServiceImpl service = new RestaurantServiceImpl(new RestaurantRepository());
     public RestaurantProcessor(RestaurantRepository restaurantRepository) {      // 7-10 pole obiektu
