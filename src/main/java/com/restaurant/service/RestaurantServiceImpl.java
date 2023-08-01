@@ -34,7 +34,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public void serviceExitProgram(String input) {
+    public void ExitProgram(String input) {
         if (input.equalsIgnoreCase("exit")) {
             System.out.println("Closing the program...");
             System.exit(0);

@@ -80,6 +80,6 @@ public class RestaurantProcessor {
     private void exitProgram() {
         System.out.println("Type 'exit' to close the program ");
         String input = scanner.nextLine();
-        service.serviceExitProgram(input);
+        service.ExitProgram(input);
     }
 }

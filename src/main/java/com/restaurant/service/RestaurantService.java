@@ -15,7 +15,7 @@ public interface RestaurantService {
 
     void AddMeal(String name, String price, UUID id);
 
-    void serviceExitProgram(String input);
+    void ExitProgram(String input);
 
     void addRestaurant(String name, String address, String type, UUID id);
 }
