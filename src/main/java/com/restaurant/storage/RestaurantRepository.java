@@ -1,9 +1,9 @@
 package com.restaurant.storage;
+
 import com.restaurant.model.Meal;
 import com.restaurant.model.Restaurant;
 
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 
@@ -36,6 +36,7 @@ public class RestaurantRepository {
     public Set<Restaurant> getRestaurants() {
         return restaurants;
     }
+
     public void addRestaurant(Restaurant restaurant) {
         restaurants.add(restaurant);
     }

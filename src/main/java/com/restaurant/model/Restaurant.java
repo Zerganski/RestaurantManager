@@ -8,10 +8,10 @@ import java.util.UUID;
 public class Restaurant {
 
     //1 pola 2. konstr. 3 metody
-    private UUID id; // identyfikator powinien byc pierwszy
+    private final UUID id; // identyfikator powinien byc pierwszy
     private String name;
-    private String address;
-    private String type;
+    private final String address;
+    private final String type;
     public Set<Meal> meals = new HashSet<>();
 
     public Restaurant(String name, String address, String type, UUID id, Set<Meal> meals) { //shift f6
@@ -40,6 +40,7 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+
     public void addMeal(Meal meal) {
         meals.add(meal);
     }
@@ -50,7 +51,7 @@ public class Restaurant {
 
     @Override
     public String toString() {
-            return "ID: " + id + ", name: " + name + ", address: " + address + ", type: " + type + "\n";
+        return "ID: " + id + ", name: " + name + ", address: " + address + ", type: " + type + "\n";
     }
 
 }

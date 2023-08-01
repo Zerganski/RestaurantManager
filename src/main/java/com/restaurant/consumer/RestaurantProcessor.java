@@ -4,11 +4,16 @@ import com.restaurant.service.RestaurantServiceImpl;
 import com.restaurant.storage.RestaurantRepository;
 
 import java.util.Scanner;
+import java.util.UUID;
 
 public class RestaurantProcessor {
+    private final Scanner scanner;
     static RestaurantServiceImpl service = new RestaurantServiceImpl(new RestaurantRepository());
+
     public RestaurantProcessor(RestaurantRepository restaurantRepository) {      // 7-10 pole obiektu
+        this.scanner = new Scanner(System.in);
     }
+
     void process() {
         boolean exit = false;
         Scanner in = new Scanner(System.in);
@@ -33,21 +38,48 @@ public class RestaurantProcessor {
     }
 
     private void addRestaurant() {
-        service.serviceAddRestaurant();
+        UUID id = UUID.randomUUID();
+        System.out.println("Enter name of the restaurant: "); // wywołanie metody printLn pola klasy .out z parametrem typu String o wartosci "enter name of the restaurant:"
+        String name = scanner.nextLine(); // deklaracja zmiennej lokalnej o nazwie name typu stirgn oraz inicnjalizacja jej poprzez przypisanei jej wartosci wywołania metody nextLine obiektu skaner
+        System.out.println("Enter address of the restaurant: ");
+        String address = scanner.nextLine();
+        System.out.println("Enter type of the restaurant: ");
+        String type = scanner.nextLine();
+        service.addRestaurant(name, address, type, id);
+        System.out.println("Restaurants UUID: " + id);
     }
+
     private void addMeal() {
-        service.serviceAddMeal();
+        System.out.println("Enter name of the meal: ");
+        String name = scanner.nextLine();
+        System.out.println("Enter price of the meal: ");
+        String price = scanner.nextLine();
+        System.out.println("Enter UUID of the restaurant: ");
+        UUID id = UUID.fromString(scanner.nextLine());
+        service.AddMeal(name, price, id);
     }
+
     private void displayRestaurants() {
-        service.serviceDisplayRestaurants();
+        service.DisplayRestaurants();
     }
+
     public void displayMeals() {
-        service.serviceDisplayMeals();
+        System.out.println("Which restaurant meals would you like to see? (input UUID)");
+        UUID id = UUID.fromString(scanner.nextLine());
+        service.DisplayMeals(id);
     }
+
     private void changeRestaurantName() {
-        service.serviceChangeRestaurantName();
+        System.out.println("Enter the UUID of the restaurant: ");
+        UUID restaurantId = UUID.fromString(scanner.nextLine());
+        System.out.println("Enter the new name for the restaurant: ");
+        String newName = scanner.nextLine();
+        service.ChangeRestaurantName(restaurantId, newName);
     }
+
     private void exitProgram() {
-        service.serviceExitProgram();
+        System.out.println("Type 'exit' to close the program ");
+        String input = scanner.nextLine();
+        service.serviceExitProgram(input);
     }
 }
