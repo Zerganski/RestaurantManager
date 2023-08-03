@@ -23,18 +23,19 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public void DisplayRestaurants() {
+    public void displayRestaurants() {
         System.out.println(getRestaurantRepository().getRestaurants().toString());
     }
 
+
     @Override
-    public void AddMeal(String name, String price, UUID id) {
+    public void addMeal(String name, String price, UUID id) {
         Meal meal = new Meal(name, price);
         addMeal(meal, id);
     }
 
     @Override
-    public void ExitProgram(String input) {
+    public void exitProgram(String input) {
         if (input.equalsIgnoreCase("exit")) {
             System.out.println("Closing the program...");
             System.exit(0);
@@ -44,7 +45,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public void ChangeRestaurantName(UUID restaurantId, String newName) {
+    public void changeRestaurantName(UUID restaurantId, String newName) {
         Optional<Restaurant> chosenRestaurant = getRestaurantRepository().getRestaurants()
                 .stream()
                 .filter(restaurant -> restaurant.getId().equals(restaurantId))
@@ -59,7 +60,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public void DisplayMeals(UUID id) {
+    public void displayMeals(UUID id) {
         Optional<Restaurant> restaurantOptional = getRestaurantRepository().getRestaurants()
                 .stream()
                 .filter(r -> r.getId().equals(id) && !r.getMeals().isEmpty())

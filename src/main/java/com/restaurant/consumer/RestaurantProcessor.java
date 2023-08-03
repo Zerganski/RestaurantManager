@@ -38,48 +38,73 @@ public class RestaurantProcessor {
     }
 
     private void addRestaurant() {
-        UUID id = UUID.randomUUID();
-        System.out.println("Enter name of the restaurant: "); // wywołanie metody printLn pola klasy .out z parametrem typu String o wartosci "enter name of the restaurant:"
-        String name = scanner.nextLine(); // deklaracja zmiennej lokalnej o nazwie name typu stirgn oraz inicnjalizacja jej poprzez przypisanei jej wartosci wywołania metody nextLine obiektu skaner
-        System.out.println("Enter address of the restaurant: ");
-        String address = scanner.nextLine();
-        System.out.println("Enter type of the restaurant: ");
-        String type = scanner.nextLine();
-        service.addRestaurant(name, address, type, id);
-        System.out.println("Restaurants UUID: " + id);
+        try {
+            UUID id = UUID.randomUUID();
+            System.out.println("Enter name of the restaurant: ");
+            String name = scanner.nextLine();
+            System.out.println("Enter address of the restaurant: ");
+            String address = scanner.nextLine();
+            System.out.println("Enter type of the restaurant: ");
+            String type = scanner.nextLine();
+            service.addRestaurant(name, address, type, id);
+            System.out.println("Restaurants UUID: " + id);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Restaurant was not added.");
+        }
     }
 
     private void addMeal() {
-        System.out.println("Enter name of the meal: ");
-        String name = scanner.nextLine();
-        System.out.println("Enter price of the meal: ");
-        String price = scanner.nextLine();
-        System.out.println("Enter UUID of the restaurant: ");
-        UUID id = UUID.fromString(scanner.nextLine());
-        service.AddMeal(name, price, id);
+        try {
+            System.out.println("Enter name of the meal: ");
+            String name = scanner.nextLine();
+            System.out.println("Enter price of the meal: ");
+            String price = scanner.nextLine();
+            System.out.println("Enter UUID of the restaurant: ");
+            UUID id = UUID.fromString(scanner.nextLine());
+            service.addMeal(name, price, id);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid UUID format. Meal was not added.");
+        }
     }
 
     private void displayRestaurants() {
-        service.DisplayRestaurants();
+        try {
+            service.displayRestaurants();
+        } catch (Exception e) {
+            System.out.println("An error occurred while displaying restaurants: ");
+        }
     }
 
     public void displayMeals() {
         System.out.println("Which restaurant meals would you like to see? (input UUID)");
-        UUID id = UUID.fromString(scanner.nextLine());
-        service.DisplayMeals(id);
+        try {
+            UUID id = UUID.fromString(scanner.nextLine());
+            service.displayMeals(id);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid UUID format. Please enter a valid UUID.");
+        }
     }
 
     private void changeRestaurantName() {
-        System.out.println("Enter the UUID of the restaurant: ");
-        UUID restaurantId = UUID.fromString(scanner.nextLine());
-        System.out.println("Enter the new name for the restaurant: ");
-        String newName = scanner.nextLine();
-        service.ChangeRestaurantName(restaurantId, newName);
+        try {
+            System.out.println("Enter the UUID of the restaurant: ");
+            UUID restaurantId = UUID.fromString(scanner.nextLine());
+            System.out.println("Enter the new name for the restaurant: ");
+            String newName = scanner.nextLine();
+            service.changeRestaurantName(restaurantId, newName);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid UUID format. Please enter a valid UUID.");
+        }
     }
 
     private void exitProgram() {
-        System.out.println("Type 'exit' to close the program ");
-        String input = scanner.nextLine();
-        service.ExitProgram(input);
+        try {
+            System.out.println("Type 'exit' to close the program ");
+            String input = scanner.nextLine();
+            service.exitProgram(input);
+        }
+        catch (IllegalArgumentException e) {
+            System.out.println("Nuh uh, this is not 'exit'");
+        }
     }
 }

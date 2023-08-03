@@ -28,6 +28,12 @@ public class Restaurant {
         this.type = type;
         this.id = id;
     }
+    public void displayRestaurantInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Address: " + address);
+        System.out.println("Type: " + type);
+        System.out.println("UUID: " + id);
+    }
 
     public void setName(String name) {
         this.name = name;
