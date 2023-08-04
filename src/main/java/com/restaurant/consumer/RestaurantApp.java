@@ -1,4 +1,6 @@
-package com.restaurant;
+package com.restaurant.consumer;
+
+import com.restaurant.storage.RestaurantRepository;
 
 public class RestaurantApp {
 
