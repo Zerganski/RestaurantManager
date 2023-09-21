@@ -33,7 +33,7 @@ public class LambdaExercise {
         String commaSeparatedPoints = points.stream()
                 .map(Point::toString) // Convert each Point to its string representation
                 .collect(Collectors.joining(", ")); // Join them with a comma and space
-        // Print the comma-separated string
+        // Print the comma-separated string 123
         System.out.println(commaSeparatedPoints);
 
 
