@@ -9,17 +9,21 @@ public class Restaurant {
 
     //1 pola 2. konstr. 3 metody
     private final UUID id; // identyfikator powinien byc pierwszy
-    private String name;
     private final String address;
     private final String type;
     public Set<Meal> meals = new HashSet<>();
+    public Set<Chef> chefs = new HashSet<>();
+    public Set<HeadChef> headChefs = new HashSet<>();
+    private String name;
 
-    public Restaurant(String name, String address, String type, UUID id, Set<Meal> meals) { //shift f6
+    public Restaurant(String name, String address, String type, UUID id, Set<Meal> meals, Set<Chef> chefs, Set<HeadChef> headChefs) { //shift f6
         this.name = name;
         this.address = address;
         this.type = type;
         this.id = id;
         this.meals = meals;
+        this.chefs = chefs;
+        this.headChefs = headChefs;
     }
 
     public Restaurant(String name, String address, String type, UUID id) {
@@ -27,16 +31,6 @@ public class Restaurant {
         this.address = address;
         this.type = type;
         this.id = id;
-    }
-    public void displayRestaurantInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Address: " + address);
-        System.out.println("Type: " + type);
-        System.out.println("UUID: " + id);
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public UUID getId() {
@@ -47,12 +41,32 @@ public class Restaurant {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void addMeal(Meal meal) {
         meals.add(meal);
     }
 
+    public void addChef(Chef chef) {
+        chefs.add(chef);
+    }
+
+    public void addHeadChef(HeadChef headChef) {
+        headChefs.add(headChef);
+    }
+
     public Set<Meal> getMeals() {
         return meals;
+    }
+
+    public Set<Chef> getChefs() {
+        return chefs;
+    }
+
+    public Set<HeadChef> getHeadChefs() {
+        return headChefs;
     }
 
     @Override
